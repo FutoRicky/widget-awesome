@@ -2,8 +2,6 @@ var React = require('react')
 var Header = require('./Header.jsx')
 
 var LikeMeButton = React.createClass({
-
-
   getInitialState: function() {
     return {
       likescount: 0,
