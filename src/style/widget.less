@@ -1,0 +1,40 @@
+.page {
+  margin-top: 20%;
+}
+
+@green: #17932e;
+@blue: #4888f1;
+
+body{
+  text-align:center;
+  padding: 50px;
+  font-size: 18px;
+}
+
+/*Code to calculate the colors*/
+
+.button{
+  font: bold 16px/21px Helvetica;
+  color:#fff;
+  text-decoration: none;
+  border-radius:6px;
+  padding: 10px 20px;
+}
+
+.color-magic(@color) {
+  text-shadow: 0 1px 0 darken(@color,30%);
+  border: 1px solid darken(@color, 20%);
+  box-shadow: inset 0px 1px 0 lighten(@color, 20%);
+  background: (@color);
+  &:hover{
+    background: lighten(@color,10%);
+  }
+  &:active{
+    background: darken(@color,5%);
+    box-shadow: inset 0px 1px 2px darken(@color,30%);
+  }
+}
+
+/*Color Classes*/
+.green {.color-magic(@green);}
+.blue {.color-magic(@blue);}
